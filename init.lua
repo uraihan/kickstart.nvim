@@ -540,21 +540,15 @@ require('lazy').setup({
                 ruff = {
                   enabled = true,
                   formatEnabled = true,
-                  format = { 'I', 'E4', 'E7', 'E9', 'F', 'E501' },
+                  extendSelect = { 'I' },
+                  format = { 'I' },
                   linelength = 88,
                 },
               },
             },
           },
         },
-        ruff = {
-          settings = {
-            organizeImports = false,
-          },
-          on_attach = function(client)
-            client.server_capabilities.hoverProvider = false
-          end,
-        },
+
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -579,7 +573,6 @@ require('lazy').setup({
             },
           },
         },
-        -- TODO might be putting this wrong. look at it again
       }
 
       -- Ensure the servers and tools above are installed
@@ -595,10 +588,7 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        -- 'black',
-        'isort',
         'pylsp',
-        'ruff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
