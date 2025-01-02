@@ -537,22 +537,12 @@ require('lazy').setup({
           settings = {
             pylsp = {
               plugins = {
-                ruff = { enabled = true },
-                -- formatter options
-                black = { enabled = false },
-                autopep8 = { enabled = false },
-                yapf = { enabled = false },
-                -- linter options
-                pylint = { enabled = false, executable = 'pylint' },
-                pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
-                -- type checker
-                pylsp_mypy = { enabled = true },
-                mypy = { enabled = true },
-                -- auto-completion options
-                -- jedi_completion = { fuzzy = true },
-                -- import sorting
-                pyls_isort = { enabled = false },
+                ruff = {
+                  enabled = true,
+                  formatEnabled = true,
+                  format = { 'I', 'E4', 'E7', 'E9', 'F', 'E501' },
+                  linelength = 88,
+                },
               },
             },
           },
