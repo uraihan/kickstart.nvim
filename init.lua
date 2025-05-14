@@ -689,6 +689,12 @@ require('lazy').setup({
               require('luasnip').filetype_extend('css', { 'css' })
               require('luasnip').filetype_extend('python', { 'python', 'pydoc', 'unittest' })
               require('luasnip.loaders.from_vscode').lazy_load()
+              vim.keymap.set({ 'i', 's' }, '<Tab>', function()
+                require('luasnip').jump(1)
+              end, { silent = true })
+              vim.keymap.set({ 'i', 's' }, '<S-Tab>', function()
+                require('luasnip').jump(-1)
+              end, { silent = true })
             end,
           },
         },
