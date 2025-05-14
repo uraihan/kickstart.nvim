@@ -590,6 +590,8 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'pylsp',
         'hls',
+        'html-lsp',
+        'cssls',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -674,6 +676,9 @@ require('lazy').setup({
           {
             'rafamadriz/friendly-snippets',
             config = function()
+              require('luasnip').filetype_extend('html', { 'html' })
+              require('luasnip').filetype_extend('css', { 'css' })
+              require('luasnip').filetype_extend('python', { 'python', 'pydoc', 'unittest' })
               require('luasnip.loaders.from_vscode').lazy_load()
             end,
           },
