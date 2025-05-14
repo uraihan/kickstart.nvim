@@ -542,6 +542,7 @@ require('lazy').setup({
                   formatEnabled = true,
                   extendSelect = { 'I' },
                   format = { 'I' },
+                  ignore = { 'E501' },
                   linelength = 88,
                 },
               },
