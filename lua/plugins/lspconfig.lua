@@ -238,6 +238,8 @@ return {
             },
           },
         },
+
+        -- Lua LSP settings
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -252,6 +254,27 @@ return {
             },
           },
         },
+
+        -- Webdev LSP
+        -- cssls = {},
+        -- tailwindcss = {
+        --   filetypes = extend('tailwindcss', 'filetypes', { 'htmldjango' }),
+        -- },
+        -- html = {
+        --   settings = {
+        --     html = {
+        --       format = {
+        --         templating = true,
+        --         wrapLineLength = 120,
+        --         wrapAttributes = 'auto',
+        --       },
+        --       hover = {
+        --         documentation = true,
+        --         references = true,
+        --       },
+        --     },
+        --   },
+        -- },
       }
 
       -- Ensure the servers and tools above are installed
@@ -271,9 +294,6 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'pylsp',
-        'html-lsp',
-        'cssls',
-        'tailwindcss',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
