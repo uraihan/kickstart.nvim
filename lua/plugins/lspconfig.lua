@@ -221,17 +221,7 @@ return {
         -- ts_ls = {},
         --
 
-        -- tailwindcss = {
-        --   settings = {
-        --     tailwindcss = {
-        --       includeLanguages = { htmldjango = 'html' },
-        --     },
-        --   },
-        -- },
-        -- html = {
-        --   filetypes = { 'html', 'htmldjango' },
-        -- },
-        cssls = {},
+        -- Python LSP Settings
         pylsp = {
           settings = {
             pylsp = {
