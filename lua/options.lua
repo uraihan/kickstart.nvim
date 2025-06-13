@@ -76,3 +76,6 @@ vim.o.expandtab = true
 
 -- Use 4-space tab
 vim.o.shiftwidth = 4
+
+vim.o.wrap = true
+vim.o.textwidth = 80
