@@ -221,6 +221,11 @@ return {
         -- ts_ls = {},
         --
 
+        -- emmet ls settings
+        emmet_language_server = {
+          filetypes = { 'css', 'html', 'javascriptreact', 'typescriptreact', 'vue' },
+        },
+
         -- Python LSP Settings
         pylsp = {
           settings = {
