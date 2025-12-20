@@ -220,6 +220,16 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        -- ruff settings
+
+        ruff = {
+          enabled = true,
+          formatEnabled = true,
+          extendSelect = { 'I' },
+          format = { 'I' },
+          ignore = { 'E501' },
+          linelength = 88,
+        },
 
         -- emmet ls settings
         emmet_language_server = {
@@ -227,22 +237,7 @@ return {
         },
 
         -- Python LSP Settings
-        pylsp = {
-          settings = {
-            pylsp = {
-              plugins = {
-                ruff = {
-                  enabled = true,
-                  formatEnabled = true,
-                  extendSelect = { 'I' },
-                  format = { 'I' },
-                  ignore = { 'E501' },
-                  linelength = 88,
-                },
-              },
-            },
-          },
-        },
+        basedpyright = {},
 
         -- Lua LSP settings
         lua_ls = {
