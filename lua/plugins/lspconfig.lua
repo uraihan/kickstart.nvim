@@ -276,13 +276,7 @@ return {
           cssls = {},
 
           -- tailwind does not work for html or htmldjango files
-          tailwindcss = {
-            settings = {
-              tailwindCSS = {
-                experimental = { configFile = find_tailwind_global_css() },
-              },
-            },
-          },
+          tailwindcss = {},
           html = {
             filetypes = { 'html', 'htmldjango', 'templ' },
             settings = {},
