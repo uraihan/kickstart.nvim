@@ -251,7 +251,7 @@ return {
 
           -- emmet ls settings
           emmet_language_server = {
-            filetypes = { 'css', 'html', 'javascriptreact', 'typescriptreact', 'vue' },
+            filetypes = { 'css', 'html', 'htmldjango', 'javascriptreact', 'typescriptreact', 'vue' },
           },
 
           -- Python LSP Settings
