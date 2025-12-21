@@ -273,25 +273,20 @@ return {
             },
           },
           -- Webdev LSP
-          -- cssls = {},
-          -- tailwindcss = {
-          --   filetypes = extend('tailwindcss', 'filetypes', { 'htmldjango' }),
-          -- },
-          -- html = {
-          --   settings = {
-          --     html = {
-          --       format = {
-          --         templating = true,
-          --         wrapLineLength = 120,
-          --         wrapAttributes = 'auto',
-          --       },
-          --       hover = {
-          --         documentation = true,
-          --         references = true,
-          --       },
-          --     },
-          --   },
-          -- },
+          cssls = {},
+
+          -- tailwind does not work for html or htmldjango files
+          tailwindcss = {
+            settings = {
+              tailwindCSS = {
+                experimental = { configFile = find_tailwind_global_css() },
+              },
+            },
+          },
+          html = {
+            filetypes = { 'html', 'htmldjango', 'templ' },
+            settings = {},
+          },
         },
         others = {},
       }
@@ -312,8 +307,6 @@ return {
       local ensure_installed = vim.tbl_keys(servers.mason or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        'djlint',
-        -- 'ruff',
         'shfmt',
         'prettier',
       })
