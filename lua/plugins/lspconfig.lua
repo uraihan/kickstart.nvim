@@ -273,10 +273,21 @@ return {
             },
           },
           -- Webdev LSP
-          cssls = {},
+          svelte = {},
+          jsonls = {},
+          biome = {},
+          yamlls = {},
 
           -- tailwind does not work for html or htmldjango files
           tailwindcss = {
+            filetypes = {
+              'html',
+              'css',
+              'scss',
+              'javascript',
+              'typescript',
+              'svelte',
+            },
             settings = {
               tailwindCSS = {
                 experimental = {
@@ -317,7 +328,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'shfmt',
-        'prettier',
+        -- 'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
