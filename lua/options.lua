@@ -79,3 +79,11 @@ vim.o.shiftwidth = 4
 
 vim.o.wrap = true
 vim.o.textwidth = 80
+vim.opt.formatoptions:append('ro')
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'python',
+--   callback = function()
+--     vim.opt_local.formatoptions:append 'r'
+--     vim.opt_local.formatoptions:append 'o'
+--   end,
+-- })
