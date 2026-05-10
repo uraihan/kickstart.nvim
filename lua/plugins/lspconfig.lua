@@ -288,13 +288,13 @@ return {
               'typescript',
               'svelte',
             },
-            settings = {
-              tailwindCSS = {
-                experimental = {
-                  configFile = './static/daisy.css',
-                },
-              },
-            },
+            -- settings = {
+            --   tailwindCSS = {
+            --     experimental = {
+            --       configFile = './static/daisy.css',
+            --     },
+            --   },
+            -- },
             -- root_dir = function(bufnr, on_dir)
             --   local root_files = { '.git' }
             --   local fname = vim.api.nvim_buf_get_name(bufnr)
