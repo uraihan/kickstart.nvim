@@ -227,7 +227,7 @@ return {
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
         mason = {
           -- clangd = {},
-          -- gopls = {},
+          gopls = {},
           -- pyright = {},
           -- rust_analyzer = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -328,6 +328,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'shfmt',
+        'golangci-lint',
         -- 'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
